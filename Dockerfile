@@ -1,7 +1,7 @@
 # Start from the official Go image to build your application
 FROM golang:1.20-alpine as builder
 
-# Create a directory for user service
+# Create a directory for order service
 WORKDIR /app
 
 # Copy the go module files and download dependencies
@@ -11,7 +11,7 @@ RUN go mod download
 # Copy the rest of the application code
 COPY . .
 
-# Build user service
+# Build order service
 RUN CGO_ENABLED=0 GOOS=linux go build -o main .
 
 # Use a Docker multi-stage build to create a lean production image

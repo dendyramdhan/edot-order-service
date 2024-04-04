@@ -1,4 +1,4 @@
-module github.com/dendyramdhan/edot-user-service
+module github.com/dendyramdhan/edot-order-service
 
 go 1.20
 
